@@ -62,7 +62,7 @@ button {
 }
 
 .hidden {
-  display: none !important;
+  display: none;
 }
 
 /* UTILIDADES GENERALES */
@@ -152,7 +152,7 @@ button {
 .main-nav .btn-login {
   padding: 0.9rem 2.2rem;
   background: linear-gradient(135deg, var(--blue2) 0%, var(--green2) 100%);
-  color: var(--white) !important;
+  color: var(--white);
   font-weight: 700;
   font-size: 1.44rem;
   border-radius: 99rem;
