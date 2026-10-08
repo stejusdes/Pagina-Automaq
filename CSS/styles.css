@@ -29,7 +29,8 @@ html {
 
 body {
   margin: 0;
-  font-family: Inter, "Segoe UI", Arial, sans-serif;
+  /* font-family: Inter, "Segoe UI", Arial, sans-serif; */
+  font-family: "DM Sans", sans-serif;
   font-size: 1.6rem;
   color: var(--ink);
   background: #fff;
