@@ -154,10 +154,8 @@ button {
   color: var(--white) !important;
   font-weight: 700;
   font-size: 1.44rem;
-  border-radius: 999px;
-
+  border-radius: 99rem;
   box-shadow: 0 0.4rem 1.4rem var(--green-glow);
-
   transition: all 0.3s ease;
 }
 
@@ -170,20 +168,18 @@ button {
 
 .hero {
   min-height: 65rem;
-
   display: flex;
   align-items: center;
-
   background:
     radial-gradient(circle at 85% 20%, rgba(4, 191, 85, 0.15), transparent 35%),
     linear-gradient(180deg, #fff 0%, #f8fbfd 100%);
 }
 .hero-img {
   width: 100%;
-  max-width: 480px;
+  max-width: 48rem;
   height: auto;
   object-fit: contain;
-  filter: drop-shadow(0 10px 20px rgba(3, 52, 115, 0.15));
+  filter: drop-shadow(0 1rem 2rem rgba(3, 52, 115, 0.15));
 }
 
 .hero-container {
@@ -197,9 +193,7 @@ button {
 .hero h1 {
   max-width: 78rem;
   margin: 1.8rem 0 2.2rem;
-
   font-size: clamp(4rem, 4.5vw, 7.2rem);
-
   font-weight: 800;
   line-height: 1.08;
   letter-spacing: -0.03em;
@@ -221,9 +215,7 @@ button {
 
 .section-heading h2 {
   margin: 1rem 0 1.2rem;
-
   font-size: clamp(3.2rem, 3.3vw, 5.44rem);
-
   font-weight: 800;
   letter-spacing: -0.03em;
 }
@@ -234,11 +226,9 @@ button {
 
 .split-heading {
   max-width: none;
-
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-
   gap: 4rem;
   text-align: left;
 }
@@ -259,17 +249,12 @@ button {
 .info-card {
   display: flex;
   flex-direction: column;
-
   min-height: 20rem;
   padding: 2.8rem;
-
   background: white;
-
   border: 0.1rem solid var(--line);
   border-radius: 1.8rem;
-
   box-shadow: 0 0.8rem 2.4rem rgba(16, 34, 56, 0.03);
-
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
@@ -277,7 +262,6 @@ button {
 
 .info-card:hover {
   transform: translateY(-0.4rem);
-
   box-shadow: 0 1.2rem 3rem rgba(3, 52, 115, 0.08);
 }
 
@@ -288,10 +272,8 @@ button {
 
 .info-card span {
   color: var(--green2);
-
   font-size: 1.36rem;
   font-weight: 900;
-
   margin-bottom: 0.6rem;
 }
 
@@ -301,14 +283,12 @@ button {
 
 .info-card h3 {
   margin: 0.6rem 0 1rem;
-
   font-size: 2rem;
   font-weight: 700;
 }
 
 .info-card p {
   margin: 0;
-
   color: var(--muted);
   font-size: 1.52rem;
 }
@@ -327,12 +307,9 @@ button {
 
 .service-card {
   padding: 3rem;
-
   background: white;
-
   border: 0.1rem solid var(--line);
   border-radius: 1.8rem;
-
   transition:
     transform 0.3s ease,
     border-color 0.3s ease;
