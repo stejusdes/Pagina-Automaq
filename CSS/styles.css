@@ -440,6 +440,76 @@ button {
   transform: scale(1.12);
 }
 
+/* CLIENTES (LOGOS) */
+
+.clients-group + .clients-group {
+  margin-top: 4.8rem;
+}
+
+.clients-title {
+  margin: 0 0 2rem;
+  padding-bottom: 1rem;
+
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--blue);
+
+  border-bottom: 0.1rem solid var(--line);
+}
+
+.logo-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+  gap: 2rem;
+}
+
+.logo-item {
+  height: 12rem;
+  padding: 2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: white;
+  border: 0.1rem solid var(--line);
+  border-radius: 1.8rem;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.logo-item:hover {
+  transform: translateY(-0.4rem);
+  border-color: var(--green2);
+  box-shadow: 0 1.2rem 3rem rgba(3, 52, 115, 0.08);
+}
+
+.logo-item img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+
+  filter: grayscale(1);
+  opacity: 0.75;
+  transition:
+    filter 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.logo-item:hover img {
+  filter: none;
+  opacity: 1;
+}
+
 /* CONTACTO */
 
 .contact-data {
@@ -596,6 +666,16 @@ select:focus {
   .company-grid,
   .service-grid {
     grid-template-columns: 1fr;
+  }
+
+  .logo-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.4rem;
+  }
+
+  .logo-item {
+    height: 10rem;
+    padding: 1.4rem;
   }
 
   .catalog-grid .info-card {
