@@ -189,6 +189,8 @@ button {
   height: auto;
   object-fit: contain;
   filter: drop-shadow(0 1rem 2rem rgba(3, 52, 115, 0.15));
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
 }
 
 .hero-container {
