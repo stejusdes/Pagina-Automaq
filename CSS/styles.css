@@ -195,7 +195,7 @@ button {
 
 .hero-container {
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
   gap: 4rem;
   width: 100%;
@@ -208,11 +208,12 @@ button {
   font-weight: 800;
   line-height: 1.08;
   letter-spacing: -0.03em;
+  color: #fff;
 }
 
 .hero p {
   max-width: 62rem;
-  color: var(--muted);
+  color:#dbe8f5;
   font-size: 1.76rem;
 }
 
@@ -637,7 +638,8 @@ select:focus {
   }
 
   .hero-visual {
-    display: none;
+  max-width: 60rem;
+  margin: 0 auto;
   }
 
   .company-grid,
