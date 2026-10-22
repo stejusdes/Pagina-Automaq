@@ -182,7 +182,7 @@ button {
   color: #fff;
   background:
     radial-gradient(circle at 85% 30%, rgba(29, 82, 115, 0.9), transparent 55%),
-    linear-gradient(135deg, #021f47 0%, var(--blue) 60%, #0a4a8c 100%);
+    linear-gradient(135deg, #021f47 0%, var(--blue) 60%, #023D79 100%);
 }
 
 .hero-img {
