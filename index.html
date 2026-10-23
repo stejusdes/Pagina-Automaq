@@ -374,34 +374,34 @@
               <strong>Horario</strong>
               <span>Lunes a Viernes · 08:00 – 17:00</span>
               <p>
-                 Redacta un mensaje y nuestros expertos se pondran en contacto para atenderte con gusto.
+                Cuéntanos qué necesitas: cotizaciones, desarrollo de proyectos de
+                automatización o mantenimiento. Nuestro equipo te responderá a la brevedad.
               </p>
             </div>
           </div>
           <div class="form">
-            <form class="contact-form" id="contact-form">
+              <form class="contact-form" id="contact-form" action="enviar.php" method="post">
               <label>
-                Nombre / Empresa<input
-                  name="name"
-                  required
-                  placeholder="Tus datos"
-                />
-              </label>
-              <label>
-                Correo<input name="contacto" placeholder="Correo / telefono" />
-              </label>
-              <label>
-                Mensaje
-                <textarea
-                  name="message"
-                  rows="5"
-                  required
-                  placeholder="¿En qué podemos ayudarte?"
-                ></textarea>
-              </label>
-              <button class="btn-submit" type="submit">Enviar mensaje</button>
-              <p id="contact-result" class="form-result" aria-live="polite"></p>
-            </form>
+    Nombre / Empresa
+    <input name="nombre" required placeholder="Tu nombre o empresa" autocomplete="name" />
+  </label>
+  <label>
+    Correo electrónico
+    <input type="email" name="correo" required placeholder="correo@empresa.com" autocomplete="email" />
+  </label>
+  <label>
+    Teléfono (opcional)
+    <input type="tel" name="telefono" placeholder="55 1234 5678" autocomplete="tel" />
+  </label>
+  <label>
+    Mensaje
+    <textarea name="mensaje" rows="5" required placeholder="¿En qué podemos ayudarte?"></textarea>
+  </label>
+  <input type="text" name="sitio_web" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+  <button class="btn-submit" type="submit">Enviar mensaje</button>
+  <p id="contact-result" class="form-result" aria-live="polite"></p>
+</form>
           </div>
         </div>
       </section>
@@ -413,5 +413,33 @@
       </div>
       <span>© 2026 · Todos los derechos reservados</span>
     </footer>
+
+   <script>
+  const form = document.getElementById("contact-form");
+  const result = document.getElementById("contact-result");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const btn = form.querySelector(".btn-submit");
+    btn.disabled = true;
+    result.className = "form-result";
+    result.textContent = "Enviando…";
+
+    try {
+      const res = await fetch(form.action, { method: "POST", body: new FormData(form) });
+      const data = await res.json();
+      if (!data.ok) throw new Error(data.msg);
+      result.classList.add("ok");
+      result.textContent = data.msg;
+      form.reset();
+    } catch (err) {
+      result.classList.add("form-error");
+      result.textContent = err.message || "No se pudo enviar. Escríbenos a contacto@automaq-mexico.com.";
+    } finally {
+      btn.disabled = false;
+    }
+  });
+</script>
+
   </body>
 </html>

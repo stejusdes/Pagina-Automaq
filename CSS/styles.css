@@ -544,6 +544,20 @@ button {
 
 /* FORMULARIO */
 
+.hp {
+  position: absolute;
+  left: -9999px;
+}
+
+.form-result.ok {
+  color: var(--green2);
+}
+
+.btn-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
 .form {
   margin-top: 3rem;
 }
